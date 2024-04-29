@@ -1,1 +1,30 @@
-index html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número Mágico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Número Mágico</h1>
+        <div id="mode-selection">
+            <button onclick="startGame('pvp')">PvP</button>
+            <button onclick="startGame('pve')">PvE</button>
+            <button onclick="startComputerGame()">Desafiar o Computador</button>
+        </div>
+        <div id="game-area" style="display: none;">
+            <div id="difficulty-selection" style="display: none;">
+                <button onclick="setDifficulty(50)">Fácil</button>
+                <button onclick="setDifficulty(100)">Médio</button>
+                <button onclick="setDifficulty(200)">Difícil</button>
+            </div>
+            <p id="status"></p>
+            <input type="text" id="guess" placeholder="Digite seu palpite">
+            <button onclick="checkGuess()">Enviar Palpite</button>
+        </div>
+    </div>
+    <script src="java.js"></script>
+</body>
+</html>
